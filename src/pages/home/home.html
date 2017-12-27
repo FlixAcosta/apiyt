@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      HOME PAGE
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+<ion-buttons end>
+    <ion-input type="text" placeholder="Buscar" [(ngModel)]="search"></ion-input>
+ 
+      <button ion-button small color="Default" placeholder="Search" (click)='postVideo();' >
+        <ion-icon name="search"></ion-icon>
+      </button>
+        </ion-buttons>
+ <ion-list> 
+    <ion-item >	
+      <iframe  width="320" height="360" [src]="posts" frameborder="0" style="width:100%;height:90%;background-image:url(https://static1.squarespace.com/static/521aabade4b0564f9835fee7/564dde6ee4b0ea20b1f8b7a0/564de03ae4b082df3a5032d7/1447944267281/karaoke.jpg?format=2500w)"></iframe>
+    </ion-item>
+     <ion-item >  
+      <iframe  width="320" height="360" [src]="videos" frameborder="0" style="width:100%;height:90%;background-image:url(https://static1.squarespace.com/static/521aabade4b0564f9835fee7/564dde6ee4b0ea20b1f8b7a0/564de03ae4b082df3a5032d7/1447944267281/karaoke.jpg?format=2500w)"></iframe>
+    </ion-item>
+</ion-list>
 </ion-content>
